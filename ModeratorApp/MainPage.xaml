@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ModeratorApp"
+             x:Class="ModeratorApp.MainPage"
+             Title="MainPage">
+
+    <!-- STYLE -->
+    <ContentPage.Resources>
+        <Style x:Key="GeneralButtonStyle" TargetType="Button">
+            <Setter Property="Text" Value="Abrir Evento"/>
+            <Setter Property="BackgroundColor" Value="Green"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="Margin" Value="0,-20,0,0"/>
+        </Style>
+
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HeightRequest" Value="110"/>
+        </Style>
+
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style x:Key="DateText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout x:Name="EventStackLayout" Padding="10">
+            <!-- Events added dynamically -->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
