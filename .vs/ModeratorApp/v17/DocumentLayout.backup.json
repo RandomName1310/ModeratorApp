@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\helperclasses\\databaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\helperclasses\\databaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\eventpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\helperclasses\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\helperclasses\\databaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\helperclasses\\databaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -50,86 +50,80 @@
               "RelativeToolTip": "ModeratorApp\\AppShell.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T18:06:43.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T18:06:43.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EventManager.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\HelperClasses\\EventManager.cs",
               "RelativeDocumentMoniker": "ModeratorApp\\HelperClasses\\EventManager.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\HelperClasses\\EventManager.cs",
               "RelativeToolTip": "ModeratorApp\\HelperClasses\\EventManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T18:05:23.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T18:05:23.343Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "EventPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\EventPage.xaml.cs",
               "RelativeDocumentMoniker": "ModeratorApp\\EventPage.xaml.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\EventPage.xaml.cs*",
-              "RelativeToolTip": "ModeratorApp\\EventPage.xaml.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\EventPage.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\EventPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T12:43:55.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T12:43:55.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EventPage.xaml",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\EventPage.xaml",
               "RelativeDocumentMoniker": "ModeratorApp\\EventPage.xaml",
               "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\EventPage.xaml",
               "RelativeToolTip": "ModeratorApp\\EventPage.xaml",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvxQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-25T12:43:14.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T12:43:14.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\MainPage.xaml",
               "RelativeDocumentMoniker": "ModeratorApp\\MainPage.xaml",
               "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\MainPage.xaml",
               "RelativeToolTip": "ModeratorApp\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-24T18:52:06.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T18:52:06.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "ModeratorApp\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\MainPage.xaml.cs",
               "RelativeToolTip": "ModeratorApp\\MainPage.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwCMAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-24T14:40:40.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DatabaseConnector.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\HelperClasses\\DatabaseConnector.cs",
               "RelativeDocumentMoniker": "ModeratorApp\\HelperClasses\\DatabaseConnector.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\HelperClasses\\DatabaseConnector.cs",
               "RelativeToolTip": "ModeratorApp\\HelperClasses\\DatabaseConnector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T14:38:59.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T14:38:59.123Z"
             }
           ]
         }
