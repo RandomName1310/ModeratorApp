@@ -1,6 +1,8 @@
 ﻿using System.Data;
 using System.Diagnostics;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls;
 using ModeratorApp.HelperClasses;
 
 namespace ModeratorApp;
@@ -12,23 +14,25 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    protected override async void OnAppearing()
+    protected override void OnAppearing()
     {
         base.OnAppearing();
-        await ExecuteQuery("SELECT * FROM events");
+        AddEvents();
     }
 
-    private async Task ExecuteQuery(string query)
+    private void AddEvents()
     {
         var db = new DatabaseConnector();
         var ev_manager = new EventManager(Resources, EventStackLayout, Navigation);
-        DataTable table = await db.ExecuteQueryAsync(query);
+
+        using var query = new SqlCommand("SELECT * FROM Events");
+        DataTable table = db.ExecuteQuery(query);
 
         foreach (DataRow row in table.Rows)
         {
             var event_data = new EventManager.event_data
             {
-                event_id = Convert.ToInt32(row["event_id"]),
+                event_id = Convert.ToInt32(row["event_ID"]),
                 name = row["name"].ToString(),
                 description = row["description"].ToString(),
                 date_time = row["date_time"].ToString(),

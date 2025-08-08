@@ -9,20 +9,20 @@
                HorizontalOptions="Center"
                FontAttributes="Bold"
                FontSize="30"
-               TextColor="White" />
+               TextColor="Black" />
 
         <Label x:Name="DescriptionText"
                Text=""
                HorizontalOptions="Center"
                FontAttributes="Bold"
                FontSize="20"
-               TextColor="White" />
+               TextColor="Black" />
 
         <Label x:Name="Link"
                Text=""
                HorizontalOptions="Center"
                FontAttributes="Bold"
                FontSize="20"
-               TextColor="White" />
+               TextColor="Black" />
     </VerticalStackLayout>
 </ContentPage>

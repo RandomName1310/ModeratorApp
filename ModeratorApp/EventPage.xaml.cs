@@ -1,4 +1,6 @@
 using System.Data;
+using Microsoft.Data.SqlClient;
+using Microsoft.Maui.Controls;
 using ModeratorApp.HelperClasses;
 
 namespace ModeratorApp;
@@ -17,22 +19,26 @@ public partial class EventPage : ContentPage
         Link.Text = "\nLink: " + data.link;
     }
 
-    protected override async void OnAppearing()
+    protected override void OnAppearing()
     {
         base.OnAppearing();
-        await ShowClients();
+        ShowClients();
     }
 
-    private async Task ShowClients()
+    private void ShowClients()
     {
-        string query = "SELECT client_id FROM event_client WHERE event_client.event_id = " + ev_data.event_id + ";";
         var db = new DatabaseConnector();
-        DataTable table = await db.ExecuteQueryAsync(query);
+        SqlCommand query = new SqlCommand("SELECT volunteer_id FROM Volunteer_Event WHERE Volunteer_Event.event_id = @ev_id;");
+        query.Parameters.Add("@ev_id", SqlDbType.Int).Value = ev_data.event_id;
+
+        DataTable table = db.ExecuteQuery(query);
 
         foreach (DataRow row in table.Rows)
         {
-            string client_query = "SELECT name FROM clients WHERE client_id = " + row["client_id"] + ";";
-            DataTable client_table = await db.ExecuteQueryAsync(client_query);
+            SqlCommand client_query = new SqlCommand("SELECT name FROM Volunteer WHERE volunteer_ID = @client_id;");
+            client_query.Parameters.Add("@client_id", SqlDbType.Int).Value = row["volunteer_ID"];
+
+            DataTable client_table = db.ExecuteQuery(client_query);
 
             if (client_table.Rows.Count > 0)
             {

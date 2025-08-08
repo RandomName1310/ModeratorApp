@@ -1,26 +1,35 @@
-﻿using MySqlConnector;
+﻿using Microsoft.Data.SqlClient; 
 using System.Data;
 using System.Diagnostics;
+
 
 namespace ModeratorApp.HelperClasses
 {
     class DatabaseConnector
     {
-        private string connectionString = "Server=localhost;Port=3306;Database=test;User=root;Password=pedro13102007#;";
-        public async Task<DataTable> ExecuteQueryAsync(string query)
+        string connectionString = "Server=DESKTOP-F17KATG\\SQLEXPRESS;Database=Amo_Database;User Id=AmoUser;Password=barbosa20;TrustServerCertificate=True;";
+
+        public DataTable ExecuteQuery(SqlCommand command)
         {
             var dataTable = new DataTable();
 
-            using var connection = new MySqlConnection(connectionString);
-            await connection.OpenAsync();
-            Debug.WriteLine("Conexão criada");
-
-
-            using var command = new MySqlCommand(query, connection);
-            using var reader = await command.ExecuteReaderAsync();
-            Debug.WriteLine("Leitor criado");
-
-            dataTable.Load(reader);
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    command.Connection = connection;
+                    using (var reader = command.ExecuteReader())
+                    {
+                        dataTable.Load(reader);
+                    }
+                    Debug.WriteLine("Query executed successfully: " + command.CommandText);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("An error occurred: " + ex.Message);
+            }
             return dataTable;
         }
     }
