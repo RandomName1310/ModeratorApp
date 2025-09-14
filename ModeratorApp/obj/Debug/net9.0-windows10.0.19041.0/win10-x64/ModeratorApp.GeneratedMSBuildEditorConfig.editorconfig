@@ -34,11 +34,41 @@ build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/Cards/ClientCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.Cards.ClientCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Cards\ClientCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Cards\ClientCard.xaml
+
+[C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/Cards/EventCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.Cards.EventCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Cards\EventCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Cards\EventCard.xaml
+
+[C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/Cards/RoleCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.Cards.RoleCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Cards\RoleCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Cards\RoleCard.xaml
+
+[C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/EventForm.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.EventForm.xaml
+build_metadata.AdditionalFiles.TargetPath = EventForm.xaml
+build_metadata.AdditionalFiles.RelativePath = EventForm.xaml
+
 [C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/EventPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.EventPage.xaml
 build_metadata.AdditionalFiles.TargetPath = EventPage.xaml
 build_metadata.AdditionalFiles.RelativePath = EventPage.xaml
+
+[C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ModeratorApp.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
 
 [C:/Users/pedro/OneDrive/Desktop/Apps/ModeratorApp/ModeratorApp/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

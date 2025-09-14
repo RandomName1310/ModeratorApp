@@ -3,7 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ModeratorApp.EventPage"
              Title="EventPage">
-    <VerticalStackLayout x:Name="VerticalStackLayout">
+
+    <!-- STYLE -->
+    <ContentPage.Resources>
+        <Style x:Key="ExpandButtonStyle" TargetType="Button">
+            <Setter Property="Text" Value="Expand"/>
+            <Setter Property="BackgroundColor" Value="Green"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="Margin" Value="0,-20,200,0"/>
+        </Style>
+        
+        <Style x:Key="RemoveButtonStyle" TargetType="Button">
+            <Setter Property="Text" Value="Remover"/>
+            <Setter Property="BackgroundColor" Value="Red"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="Margin" Value="0,-20,0,0"/>
+        </Style>
+
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HeightRequest" Value="110"/>
+        </Style>
+
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+
+        <Style x:Key="DateText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <!-- CONTENT-->
+    <VerticalStackLayout x:Name="ClientStackLayout">
         <Label x:Name="MainText"
                Text=""
                HorizontalOptions="Center"

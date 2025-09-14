@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModeratorApp.Cards.ClientCard">
+
+    <ContentView.Resources>
+        <Style x:Key="ExpandButtonStyle" TargetType="Button">
+            <Setter Property="Text" Value="Expand"/>
+            <Setter Property="BackgroundColor" Value="Green"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="WidthRequest" Value="150"/>
+        </Style>
+
+        <Style x:Key="RemoveButtonStyle" TargetType="Button">
+            <Setter Property="Text" Value="Remover"/>
+            <Setter Property="BackgroundColor" Value="Red"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="WidthRequest" Value="150"/>
+        </Style>
+
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HeightRequest" Value="110"/>
+        </Style>
+
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </ContentView.Resources>
+
+    <Border x:Name="RootBorder"
+            Style="{StaticResource BorderStyle}"
+            AutomationId="{Binding name}"
+            BackgroundColor="{Binding color}">
+
+        <Grid RowDefinitions="Auto,*">
+            <Label Grid.Row="0"
+               Style="{StaticResource MainText}"
+               Text="{Binding name}"
+               VerticalOptions="Start"
+               HorizontalOptions="Start"/>
+
+            <Label Grid.Row="1"
+                   Text="showing when expanded!"
+                   FontSize="20"
+                   TextColor="Black"
+                   TranslationY="55"/>
+
+            <HorizontalStackLayout Grid.Row="1"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="End"
+                                   Spacing="10">
+                <Button Style="{StaticResource ExpandButtonStyle}"
+                        Clicked="OnExpandClicked"/>
+                <Button Style="{StaticResource RemoveButtonStyle}"
+                        Clicked="OnRemoveClicked"/>
+            </HorizontalStackLayout>
+        </Grid>
+    </Border>
+</ContentView>

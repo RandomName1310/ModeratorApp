@@ -1,12 +1,14 @@
 using System.Data;
-using ModeratorApp.HelperClasses;
+using System.Diagnostics;
+using Microsoft.Extensions.Logging;
+using ModeratorApp.Services;
 
 namespace ModeratorApp;
 
 public partial class EventPage : ContentPage
 {
-    EventManager.event_data ev_data = new EventManager.event_data();
-    public EventPage(EventManager.event_data data)
+    CardManager.event_data ev_data = new CardManager.event_data();
+    public EventPage(CardManager.event_data data)
     {
         InitializeComponent();
         // get data from specific event
@@ -26,30 +28,27 @@ public partial class EventPage : ContentPage
     private async Task ShowClients()
     {
         string query = "SELECT client_id FROM event_client WHERE event_client.event_id = " + ev_data.event_id + ";";
-        var db = new DatabaseConnector();
-        DataTable table = await db.ExecuteQueryAsync(query);
+        var c_manager = new CardManager(ClientStackLayout, ev_data);
+
+        DataTable table = await DatabaseConnector.ExecuteQueryAsync(query);
 
         foreach (DataRow row in table.Rows)
         {
             string client_query = "SELECT name FROM clients WHERE client_id = " + row["client_id"] + ";";
-            DataTable client_table = await db.ExecuteQueryAsync(client_query);
+            DataTable client_table = await DatabaseConnector.ExecuteQueryAsync(client_query);
 
             if (client_table.Rows.Count > 0)
             {
-                ShowOnScreen(client_table.Rows[0]["name"].ToString());
+                foreach (DataRow client_row in client_table.Rows) {
+                    var client_data = new CardManager.client_data {
+                        client_id = Convert.ToInt32(row["client_id"]),
+                        name = client_row["name"].ToString() ?? "None",
+                        color = GetRandomColor().ToHex()
+                    };
+                    c_manager.add_client(client_data, ev_data);
+                }
             }
         }
-    }
-
-    private void ShowOnScreen(string name)
-    {
-        var label = new Label {
-            Text = name,
-            HorizontalOptions = LayoutOptions.Center,
-            FontSize = 30,
-        };
-
-        VerticalStackLayout.Children.Add(label);
     }
 
     private Color GetRandomColor()

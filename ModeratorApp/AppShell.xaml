@@ -9,7 +9,15 @@
 
     <ShellContent
         Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+    <ShellContent
+        Title="Main"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    <ShellContent
+        Title="Events"
+        ContentTemplate="{DataTemplate local:EventPage}"
+        Route="EventPage" />
 
 </Shell>

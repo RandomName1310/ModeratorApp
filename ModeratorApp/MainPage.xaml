@@ -5,42 +5,27 @@
              x:Class="ModeratorApp.MainPage"
              Title="MainPage">
 
-    <!-- STYLE -->
-    <ContentPage.Resources>
-        <Style x:Key="GeneralButtonStyle" TargetType="Button">
-            <Setter Property="Text" Value="Abrir Evento"/>
-            <Setter Property="BackgroundColor" Value="Green"/>
-            <Setter Property="TextColor" Value="Black"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="WidthRequest" Value="200"/>
-            <Setter Property="Margin" Value="0,-20,0,0"/>
-        </Style>
-
-        <Style x:Key="BorderStyle" TargetType="Border">
-            <Setter Property="Stroke" Value="Black"/>
-            <Setter Property="StrokeThickness" Value="2"/>
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="HeightRequest" Value="110"/>
-        </Style>
-
-        <Style x:Key="MainText" TargetType="Label">
-            <Setter Property="TextColor" Value="Black"/>
-            <Setter Property="FontSize" Value="30"/>
-        </Style>
-
-        <Style x:Key="DateText" TargetType="Label">
-            <Setter Property="TextColor" Value="Black"/>
-            <Setter Property="FontSize" Value="20"/>
-        </Style>
-    </ContentPage.Resources>
-
     <ScrollView>
-        <VerticalStackLayout x:Name="EventStackLayout" Padding="10">
-            <Label Text="Eventos disponíveis:"
+        <Grid x:Name="MainGrid">
+            <VerticalStackLayout x:Name="EventStackLayout" Padding="10">
+                <Label Text="Eventos disponíveis:"
                    HorizontalOptions="Center"
                    FontAttributes="Bold"
                    FontSize="30"
-                   TextColor="White" />  
-        </VerticalStackLayout>
+                   TextColor="White" />
+                <Button x:Name="AddEventButton"
+                    BackgroundColor="Green"
+                    Text="+"
+                    TextColor="White"
+                    FontSize="50"
+                    WidthRequest="70"
+                    HeightRequest="70"
+                    BorderWidth="2"
+                    BorderColor="White"
+                    Clicked="AddEvent"
+                    VerticalOptions="Start"
+                    HorizontalOptions="End"/>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>
