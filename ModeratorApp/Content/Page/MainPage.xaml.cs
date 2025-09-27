@@ -49,4 +49,14 @@ public partial class MainPage : ContentPage
         EventForm ev_form = new EventForm(EventStackLayout);
         MainGrid.Add(ev_form);
     }
+
+    private async void ManageRole(object sender, EventArgs e) {
+        var button = (Button)sender;
+
+        await button.ScaleTo(0.8, 60, Easing.Linear);
+        await button.ScaleTo(1.0, 60, Easing.Linear);
+
+        RoleForm role_form = new RoleForm();
+        MainGrid.Add(role_form);
+    }
 }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModeratorApp.Cards.RoleManageCard">
+
+    <ContentView.Resources>
+        <!-- Main Text Style -->
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="#333333"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Entry Style -->
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#F0F0F0"/>
+            <Setter Property="TextColor" Value="#333"/>
+            <Setter Property="PlaceholderColor" Value="#888"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="5,10,5,0"/>
+            <Setter Property="HeightRequest" Value="40"/>
+        </Style>
+    </ContentView.Resources>
+
+    <!-- Border :> -->
+    <Border x:Name="RootBorder"
+        Stroke="#9c9c9c"
+        StrokeThickness="2"
+        BackgroundColor="White"
+        HeightRequest="100">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="15"/>
+        </Border.StrokeShape>
+
+        <!-- Grid with two columns -->
+        <Grid ColumnDefinitions="*,Auto"
+          Padding="10"
+          VerticalOptions="Center"
+          HorizontalOptions="Fill">
+
+            <Label Grid.Column="0"
+               Text="{Binding name}"
+               Style="{StaticResource MainText}"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"/>
+
+            <!-- Button on the right -->
+            <ImageButton Grid.Column="1"
+                Source="trash.png"
+                WidthRequest="20"
+                HeightRequest="20"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Clicked="OnCloseClicked"
+                ZIndex="1"/>
+        </Grid>
+    </Border>
+</ContentView>

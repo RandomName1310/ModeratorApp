@@ -9,11 +9,39 @@ public partial class EventForm : ContentView
 {
     VerticalStackLayout layout;
 
+
     public EventForm(VerticalStackLayout _layout)
 	{
 		InitializeComponent();
+        InitEventPicker();
         layout = _layout;
 	}
+
+    private async void InitEventPicker() {
+        // clear picker before init
+        RolePicker.Items.Clear();
+
+        string query = "SELECT * FROM roles";
+        DataTable? table = await DatabaseConnector.ExecuteQueryAsync(query);
+
+        if (table == null) return;
+        foreach (DataRow row in table.Rows) {
+            if (row != null) {
+                RolePicker.Items.Add(row["name"].ToString());
+            }
+        }
+    }
+
+    private void OnRolePickerChange(object sender, EventArgs e) {
+        var role_manager = new CardManager(RoleStack);
+        var role_data = new CardManager.RoleData {
+            role_id = 1,
+            name = RolePicker.SelectedItem?.ToString() ?? "None",
+            color = GetRandomColor().ToHex()
+        };
+
+        role_manager.add_role(role_data);
+    }
 
     private async void AddEventCard(object sender, EventArgs e) {
         string query = "INSERT INTO events(name, description, date_time, link, number_limit) VALUES('"

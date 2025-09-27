@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModeratorApp.RoleForm"
+             BackgroundColor="Transparent">
+
+    <Grid BackgroundColor="#80000000"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill">
+
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Center"
+              ColumnDefinitions="*"
+              Padding="10"
+              MaximumWidthRequest="500"
+              MinimumWidthRequest="250">
+
+            <Border Grid.Column="0"
+                    Padding="20"
+                    Stroke="White"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 20"
+                    BackgroundColor="#1C1C1C"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+
+                <ScrollView>
+                    <VerticalStackLayout Spacing="10">
+                        <!-- Close Button -->
+                        <Button Text="X"
+                                BackgroundColor="Red"
+                                TextColor="White"
+                                CornerRadius="20"
+                                BorderColor="White"
+                                BorderWidth="2"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                HorizontalOptions="End"
+                                VerticalOptions="Start"
+                                Clicked="OnCloseClicked"/>
+                        
+                        <!-- Title -->
+                        <Label Text="Gerenciar papéis:"
+                               TextColor="White"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Center"
+                               FontSize="20"/>
+
+                        <!-- Entry + Button -->
+                        <HorizontalStackLayout HorizontalOptions="Fill"
+                                               Spacing="10"
+                                               Padding="5,0">
+                            <Entry Placeholder="Nome do papél"
+                                   x:Name="RoleEntry"
+                                   TextColor="Black"
+                                   BackgroundColor="#F5F5F5"
+                                   HorizontalOptions="FillAndExpand"
+                                   MaximumWidthRequest="300"/>
+
+                            <Button Text="Adicionar"
+                                    BackgroundColor="#4CAF50"
+                                    TextColor="White"
+                                    CornerRadius="8"
+                                    Clicked="AddRole"/>
+                        </HorizontalStackLayout>
+
+                        <VerticalStackLayout x:Name="RoleStack"
+                                             HorizontalOptions="Fill"
+                                             Spacing="5"/>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentView>

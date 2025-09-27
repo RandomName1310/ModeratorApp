@@ -26,6 +26,12 @@ namespace ModeratorApp.Services {
             public string color { get; set; }
         }
 
+        public struct RoleData {
+            public int role_id { get; set; }
+            public string name { get; set; }
+            public string color { get; set; }
+        }
+
         public CardManager(Layout eventStackLayout, event_data ev_data = new event_data()) {
             _eventStackLayout = eventStackLayout;
             _ev_data = ev_data;
@@ -41,21 +47,14 @@ namespace ModeratorApp.Services {
             _eventStackLayout.Children.Add(card);
         }
 
-        public static void RemoveDuplicates(Layout layout) {
-            var seenId = new HashSet<string>();
-            var toRemove = new List<object>();
+        public void add_role(RoleData role_data) {
+            var card = new RoleReadCard(role_data);
+            _eventStackLayout.Children.Add(card);
+        }
 
-            foreach (var item in layout.Children.ToList()) {
-                if (seenId.Contains(item.AutomationId)) {
-                    toRemove.Add(item);
-                } else {
-                    seenId.Add(item.AutomationId);
-                }
-            }
-
-            foreach (var item in toRemove) {
-                layout.Children.Remove((IView)item);
-            }
+        public void add_role_manage(RoleData role_data) {
+            var card = new RoleManageCard(role_data);
+            _eventStackLayout.Children.Add(card);
         }
     }
 }

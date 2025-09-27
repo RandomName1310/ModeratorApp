@@ -30,12 +30,12 @@ public partial class EventPage : ContentPage
         string query = "SELECT client_id FROM event_client WHERE event_client.event_id = " + ev_data.event_id + ";";
         var c_manager = new CardManager(ClientStackLayout, ev_data);
 
-        DataTable table = await DatabaseConnector.ExecuteQueryAsync(query);
+        DataTable? table = await DatabaseConnector.ExecuteQueryAsync(query);
 
         foreach (DataRow row in table.Rows)
         {
             string client_query = "SELECT name FROM clients WHERE client_id = " + row["client_id"] + ";";
-            DataTable client_table = await DatabaseConnector.ExecuteQueryAsync(client_query);
+            DataTable? client_table = await DatabaseConnector.ExecuteQueryAsync(client_query);
 
             if (client_table.Rows.Count > 0)
             {

@@ -65,7 +65,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="EventPage.xaml.cs">
+	  <Compile Update="Cards\RoleReadCard.xaml.cs">
+	    <DependentUpon>RoleReadCard.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Content\Page\EventPage.xaml.cs">
 	    <DependentUpon>EventPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
@@ -74,19 +77,25 @@
 	  <MauiXaml Update="Cards\EventCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Cards\RoleCard.xaml">
+	  <MauiXaml Update="Cards\RoleReadCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="EventForm.xaml">
+	  <MauiXaml Update="Cards\RoleManageCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="EventPage.xaml">
+	  <MauiXaml Update="Content\View\EventForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Content\Page\EventPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Cards\ClientCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="LoginPage.xaml">
+	  <MauiXaml Update="Content\Page\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Content\View\RoleForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
