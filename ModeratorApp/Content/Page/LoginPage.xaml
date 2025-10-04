@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ModeratorApp.LoginPage"
-             Title="LoginPage">
+             Title="LoginPage"
+             BackgroundColor="#262626">
     
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
         <Label 
@@ -10,15 +11,18 @@
             FontSize="40"
             HorizontalOptions="Center" 
             VerticalOptions="Center"
-            Margin="0, 0, 0, 50"/>
+            Margin="0, 0, 0, 50"
+            TextColor="White"/>
 
         <Entry x:Name="Login"
             Placeholder="LOGIN"
-            WidthRequest="300"/>
+            WidthRequest="300"
+            BackgroundColor="White"/>
 
         <Entry x:Name="Password"
             Placeholder="PASSWORD"
-            WidthRequest="300"/>
+            WidthRequest="300"
+            BackgroundColor="White"/>
 
         <Button Text="ENTER"
                 HorizontalOptions="Center" 

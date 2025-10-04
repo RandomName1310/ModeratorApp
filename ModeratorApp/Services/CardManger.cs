@@ -14,9 +14,10 @@ namespace ModeratorApp.Services {
             public int event_id { get; set; }
             public string name { get; set; }
             public string description { get; set; }
-            public string date_time { get; set; }
+            public string date { get; set; }
+            public string time_begin { get; set; }
+            public string time_end { get; set; }
             public string link { get; set; }
-            public int number_limit { get; set; }
             public string color { get; set; }
         }
 

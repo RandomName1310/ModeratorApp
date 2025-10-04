@@ -1,5 +1,7 @@
 namespace ModeratorApp.Cards;
 
+using Microsoft.Data.SqlClient;
+using Microsoft.Maui.Controls;
 using ModeratorApp.Services;
 using System.Diagnostics;
 
@@ -40,11 +42,14 @@ public partial class ClientCard : ContentView {
 
 
 
-    private async void OnRemoveClicked(object sender, EventArgs e) {
+    private void OnRemoveClicked(object sender, EventArgs e) {
         if (sender is Button btn) {
             if (!event_data.Equals(default(CardManager.event_data)) && btn.BackgroundColor == Colors.Red) {
-                string query = "DELETE FROM event_client WHERE client_id = " + client_data.client_id + " AND event_id = " + event_data.event_id + ";";
-                await DatabaseConnector.ExecuteQueryAsync(query);
+                string query = "DELETE FROM Volunteer_Event WHERE client_ID = @client_id AND event_ID = @event_id;";
+                var command = new SqlCommand(query);
+                command.Parameters.AddWithValue("@client_id", client_data.client_id);
+                command.Parameters.AddWithValue("@event_id", event_data.event_id);
+                DatabaseConnector.ExecuteNonQuery(command);
 
                 btn.BackgroundColor = Colors.Gray;
                 btn.Text = "Removed";

@@ -1,4 +1,5 @@
 using System.Data;
+using Microsoft.Data.SqlClient;
 using Microsoft.Maui.Storage;
 using ModeratorApp.Services;
 
@@ -17,9 +18,10 @@ public partial class RoleForm : ContentView
         RoleStack.Children.Clear();
 
         string query = "SELECT * FROM roles";
-		DataTable? table = await DatabaseConnector.ExecuteQueryAsync(query);
+        var command = new SqlCommand(query);
+        DataTable? table = DatabaseConnector.ExecuteReadQuery(command);
 
-		foreach (DataRow row in table.Rows) {
+        foreach (DataRow row in table.Rows) {
             var role_manager = new CardManager(RoleStack);
             var role_data = new CardManager.RoleData {
                 role_id = Convert.ToInt32(row["role_id"]),
@@ -32,8 +34,10 @@ public partial class RoleForm : ContentView
 	}
 
     async void AddRole(object sender, EventArgs e) {
-        string query = $"INSERT INTO roles(name) VALUES('{RoleEntry.Text}');";
-        _ = await DatabaseConnector.ExecuteQueryAsync(query);
+        string query = $"INSERT INTO Roles(name) VALUES(@role_name);";
+        var client_command = new SqlCommand(query);
+        client_command.Parameters.AddWithValue("@role_name", RoleEntry.Text);
+        DatabaseConnector.ExecuteNonQuery(client_command);
         ShowRoles();
     }
     private void OnCloseClicked(object sender, EventArgs e) {

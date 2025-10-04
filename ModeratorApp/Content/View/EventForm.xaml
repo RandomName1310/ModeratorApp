@@ -90,11 +90,17 @@
                                    BackgroundColor="#F5F5F5"
                                    HorizontalOptions="Fill"/>
 
-                            <Entry Placeholder="Date (AAAA-MM-DD HH:MM:SS)"
-                                   x:Name="DateEntry"
-                                   TextColor="Black"
-                                   BackgroundColor="#F5F5F5"
-                                   HorizontalOptions="Fill"/>
+                            <Label Text="Data de ocorrência do evento:"
+                                   TextColor="White"/>
+                            <DatePicker x:Name="DateEntry"
+                                        BackgroundColor="White"/>
+
+                            <Label Text="Hora de início e término do evento"
+                                   TextColor="White"/>
+                            <TimePicker x:Name="TimeBegin"
+                                        BackgroundColor="White"/>
+                            <TimePicker x:Name="TimeEnd"
+                                        BackgroundColor="White"/>
 
                             <Entry Placeholder="Link"
                                    x:Name="LinkEntry"
@@ -103,9 +109,11 @@
                                    HorizontalOptions="Fill"/>
 
                             <Picker x:Name="RolePicker"
-                                    Title="Escolha quais papéis adicionar"
+                                    Title="Escolha quais papéis adicionar:"
+                                    TitleColor="White"
                                     SelectedIndexChanged="OnRolePickerChange"
-                                    HorizontalOptions="Fill">
+                                    HorizontalOptions="Fill"
+                                    BackgroundColor="White">
                                 <Picker.Items>
                                 </Picker.Items>
                             </Picker>

@@ -1,5 +1,6 @@
 using System.Data;
 using System.Diagnostics;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using ModeratorApp.Services;
 
@@ -14,28 +15,33 @@ public partial class EventPage : ContentPage
         // get data from specific event
         ev_data = data;
 
-        MainText.Text = "Event ID: " + data.event_id.ToString() + "   Number Limit: " + data.number_limit.ToString();
+        MainText.Text = "Event ID: " + data.event_id.ToString();
         DescriptionText.Text = data.description;
         Link.Text = "\nLink: " + data.link;
     }
 
-    protected override async void OnAppearing()
+    protected override void OnAppearing()
     {
         base.OnAppearing();
-        await ShowClients();
+        ShowClients();
     }
 
-    private async Task ShowClients()
+    private void ShowClients()
     {
-        string query = "SELECT client_id FROM event_client WHERE event_client.event_id = " + ev_data.event_id + ";";
-        var c_manager = new CardManager(ClientStackLayout, ev_data);
+        var c_manager = new CardManager(ClientStackLayout);
+        string query = "SELECT volunteer_ID FROM Volunteer_Event WHERE Volunteer_Event.event_ID = @ev_data";
+        var command = new SqlCommand(query);
+        command.Parameters.AddWithValue("@ev_data", ev_data.event_id);
 
-        DataTable? table = await DatabaseConnector.ExecuteQueryAsync(query);
+        DataTable? table = DatabaseConnector.ExecuteReadQuery(command);
 
         foreach (DataRow row in table.Rows)
         {
-            string client_query = "SELECT name FROM clients WHERE client_id = " + row["client_id"] + ";";
-            DataTable? client_table = await DatabaseConnector.ExecuteQueryAsync(client_query);
+            string client_query = "SELECT name FROM Volunteers WHERE volunteer_ID = @client_id;";
+            var client_command = new SqlCommand(client_query);
+            client_command.Parameters.AddWithValue("@client_id", row["volunteer_ID"]);
+
+            DataTable? client_table = DatabaseConnector.ExecuteReadQuery(client_command);
 
             if (client_table.Rows.Count > 0)
             {

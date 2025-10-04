@@ -1,4 +1,6 @@
+using Microsoft.Data.SqlClient;
 using ModeratorApp.Services;
+using System.Data;
 namespace ModeratorApp.Cards;
 
 public partial class EventCard : ContentView
@@ -22,14 +24,21 @@ public partial class EventCard : ContentView
         await Navigation.PushAsync(new EventPage(event_data));
 
     }
-    public async void RemoveEvent(object sender, EventArgs e) {
+    public void RemoveEvent(object sender, EventArgs e) {
         if (sender is Button btn) {
             if (!event_data.Equals(default(CardManager.event_data)) && btn.BackgroundColor == Colors.Red) {
-                string deleteClientsQuery = "DELETE FROM event_clients WHERE event_id = " + event_data.event_id + ";";
-                string deleteEventQuery = "DELETE FROM events WHERE event_id = " + event_data.event_id + ";";
+                string deleteClientsQuery = "DELETE FROM Volunteer_Event WHERE event_ID = @event_id";
+                string deleteEventQuery = "DELETE FROM Events WHERE event_ID = @event_id;";
 
-                await DatabaseConnector.ExecuteQueryAsync(deleteClientsQuery);
-                await DatabaseConnector.ExecuteQueryAsync(deleteEventQuery);
+
+                var deleteClientscommand = new SqlCommand(deleteClientsQuery);
+                var deleteEventcommand = new SqlCommand(deleteEventQuery);
+
+                deleteClientscommand.Parameters.AddWithValue("@event_id", event_data.event_id);
+                deleteEventcommand.Parameters.AddWithValue("@event_id", event_data.event_id);
+
+                DatabaseConnector.ExecuteNonQuery(deleteClientscommand);
+                DatabaseConnector.ExecuteNonQuery(deleteEventcommand);
 
                 btn.BackgroundColor = Colors.Gray;
                 btn.Text = "Removed";

@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Xml.Linq;
+using Microsoft.Data.SqlClient;
 using ModeratorApp.Services;
 
 namespace ModeratorApp;
@@ -17,12 +18,13 @@ public partial class EventForm : ContentView
         layout = _layout;
 	}
 
-    private async void InitEventPicker() {
+    private void InitEventPicker() {
         // clear picker before init
         RolePicker.Items.Clear();
 
         string query = "SELECT * FROM roles";
-        DataTable? table = await DatabaseConnector.ExecuteQueryAsync(query);
+        var command = new SqlCommand(query);
+        DataTable? table = DatabaseConnector.ExecuteReadQuery(command);
 
         if (table == null) return;
         foreach (DataRow row in table.Rows) {
@@ -44,17 +46,19 @@ public partial class EventForm : ContentView
     }
 
     private async void AddEventCard(object sender, EventArgs e) {
-        string query = "INSERT INTO events(name, description, date_time, link, number_limit) VALUES('"
-            + (NameEntry.Text ?? "None").Replace("'", "''") + "', '"
-            + (DescriptionEntry.Text ?? "None").Replace("'", "''") + "', '"
-            + (DateEntry.Text ?? "None").Replace("'", "''") + "', '"
-            + (LinkEntry.Text ?? "None").Replace("'", "''") + "', "
-            + 25
-            + ");";
+        string query = @"INSERT INTO events(name, description, date, time_begin, time_end, link) 
+                        VALUES(@name, @description, @date, @time_begin, @time_end, @link)";
 
-        DataTable? table = await DatabaseConnector.ExecuteQueryAsync(query);
+        var command = new SqlCommand(query);
+        command.Parameters.AddWithValue("@name", NameEntry.Text ?? "None");
+        command.Parameters.AddWithValue("@description", DescriptionEntry.Text ?? "None");
+        command.Parameters.AddWithValue("@date", DateEntry.Date.ToString() ?? "None");
+        command.Parameters.AddWithValue("@time_begin", TimeBegin.Time.ToString() ?? "None");
+        command.Parameters.AddWithValue("@time_end", TimeEnd.Time.ToString() ?? "None");
+        command.Parameters.AddWithValue("@link", LinkEntry.Text ?? "None");
+        int roles_affected = DatabaseConnector.ExecuteNonQuery(command);
 
-        if (table == null) {
+        if (roles_affected == 0) {
             await Application.Current.MainPage.DisplayAlert("Commando SQL não reconhecido", "Coloque dados válidos", "Tentar novamente");
             return;
         }
@@ -64,9 +68,10 @@ public partial class EventForm : ContentView
             event_id = 10,
             name = NameEntry.Text ?? "None",
             description = DescriptionEntry.Text ?? "None",
-            date_time = DateEntry.Text ?? "None",
+            date = DateEntry.Date.ToString() ?? "None",
+            time_begin = TimeBegin.Time.ToString() ?? "None",
+            time_end = TimeEnd.Time.ToString() ?? "None",
             link = LinkEntry.Text ?? "None", 
-            number_limit = 25,
             color = GetRandomColor().ToHex()
         };
         ev_manager.add_event(event_data);

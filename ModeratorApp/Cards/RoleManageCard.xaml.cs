@@ -1,3 +1,4 @@
+using Microsoft.Data.SqlClient;
 using ModeratorApp.Services;
 namespace ModeratorApp.Cards;
 
@@ -12,9 +13,13 @@ public partial class RoleManageCard : ContentView
         BindingContext = _role_data;
     }
 
-    private async void OnCloseClicked(object sender, EventArgs e) {
-        string query = $"DELETE FROM roles WHERE name = '{role_data.name}';";
-        _ = await DatabaseConnector.ExecuteQueryAsync(query);
+    private void OnCloseClicked(object sender, EventArgs e) {
+        string query = $"DELETE FROM Roles WHERE name = @role_name;";
+        var command = new SqlCommand(query);
+        command.Parameters.AddWithValue("@role_name", role_data);
+        DatabaseConnector.ExecuteNonQuery(command);
+
+        // destroy this object
         if (this.Parent is Layout parentLayout) {
             parentLayout.Children.Remove(this);
         }

@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Diagnostics;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using ModeratorApp.Services;
 
@@ -10,13 +11,15 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        _ = ExecuteQuery("SELECT * FROM events");
+        ExecuteQuery();
     }
 
-    private async Task ExecuteQuery(string query)
+    private void ExecuteQuery()
     {
         var ev_manager = new CardManager(EventStackLayout);
-        DataTable table = await DatabaseConnector.ExecuteQueryAsync(query);
+
+        var command = new SqlCommand("SELECT * FROM Events");
+        DataTable table = DatabaseConnector.ExecuteReadQuery(command);
 
         foreach (DataRow row in table.Rows)
         {
@@ -25,9 +28,10 @@ public partial class MainPage : ContentPage
                 event_id = Convert.ToInt32(row["event_id"]),
                 name = row["name"].ToString() ?? "None",
                 description = row["description"].ToString() ?? "None",
-                date_time = row["date_time"].ToString() ?? "None",
+                date = row["date"].ToString() ?? "None",
+                time_begin = row["time_begin"].ToString() ?? "None",
+                time_end = row["time_end"].ToString() ?? "None",
                 link = row["link"].ToString() ?? "None",
-                number_limit = Convert.ToInt32(row["number_limit"]),
                 color = GetRandomColor().ToHex()
             };
 
