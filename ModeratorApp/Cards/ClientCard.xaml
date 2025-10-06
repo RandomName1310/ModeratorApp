@@ -1,65 +1,89 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ModeratorApp.Cards.ClientCard">
+             x:Class="ModeratorApp.Cards.ClientCard"
+             Padding="10">
 
+    <!-- Recursos reutilizáveis -->
     <ContentView.Resources>
+        <!-- Botão Expand -->
         <Style x:Key="ExpandButtonStyle" TargetType="Button">
             <Setter Property="Text" Value="Expand"/>
             <Setter Property="BackgroundColor" Value="Green"/>
-            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontSize" Value="20"/>
-            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="WidthRequest" Value="120"/>
+            <Setter Property="HeightRequest" Value="50"/>
         </Style>
 
+        <!-- Botão Remover -->
         <Style x:Key="RemoveButtonStyle" TargetType="Button">
             <Setter Property="Text" Value="Remover"/>
             <Setter Property="BackgroundColor" Value="Red"/>
-            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontSize" Value="20"/>
-            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="WidthRequest" Value="120"/>
+            <Setter Property="HeightRequest" Value="50"/>
         </Style>
 
+        <!-- Borda do Card -->
         <Style x:Key="BorderStyle" TargetType="Border">
             <Setter Property="Stroke" Value="Black"/>
             <Setter Property="StrokeThickness" Value="2"/>
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="HeightRequest" Value="110"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BackgroundColor" Value="White"/>
         </Style>
 
+        <!-- Texto Principal -->
         <Style x:Key="MainText" TargetType="Label">
             <Setter Property="TextColor" Value="Black"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <!-- Texto secundário -->
+        <Style x:Key="SubText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="18"/>
         </Style>
     </ContentView.Resources>
 
     <Border x:Name="RootBorder"
             Style="{StaticResource BorderStyle}"
+            BackgroundColor="{Binding color}"
             AutomationId="{Binding name}"
-            BackgroundColor="{Binding color}">
+            MaximumHeightRequest="500">
 
-        <Grid RowDefinitions="Auto,*">
-            <Label Grid.Row="0"
-               Style="{StaticResource MainText}"
-               Text="{Binding name}"
-               VerticalOptions="Start"
-               HorizontalOptions="Start"/>
+        <Grid RowDefinitions="Auto, *" ColumnDefinitions="*, Auto" RowSpacing="10" ColumnSpacing="10">
 
-            <Label Grid.Row="1"
-                   Text="showing when expanded!"
-                   FontSize="20"
-                   TextColor="Black"
-                   TranslationY="55"/>
+            <!-- client name -->
+            <Label Grid.Row="0" Grid.Column="0"
+                   Style="{StaticResource MainText}"
+                   Text="{Binding name}"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"/>
 
-            <HorizontalStackLayout Grid.Row="1"
+            <!-- Buttons -->
+            <HorizontalStackLayout Grid.Row="0" Grid.Column="1"
                                    HorizontalOptions="End"
-                                   VerticalOptions="End"
+                                   VerticalOptions="Center"
                                    Spacing="10">
-                <Button Style="{StaticResource ExpandButtonStyle}"
-                        Clicked="OnExpandClicked"/>
-                <Button Style="{StaticResource RemoveButtonStyle}"
-                        Clicked="OnRemoveClicked"/>
+                <Button Style="{StaticResource ExpandButtonStyle}" Clicked="OnExpandClicked"/>
+                <Button Style="{StaticResource RemoveButtonStyle}" Clicked="OnRemoveClicked"/>
             </HorizontalStackLayout>
+
+            <!-- show events -->
+            <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                        VerticalScrollBarVisibility="Always"
+                        MaximumHeightRequest="400">
+                <VerticalStackLayout x:Name="RoleStack"
+                                     Spacing="10"
+                                     Padding="0">
+                    <!-- Roles added here! -->
+                </VerticalStackLayout>
+            </ScrollView>
+
         </Grid>
     </Border>
 </ContentView>
+

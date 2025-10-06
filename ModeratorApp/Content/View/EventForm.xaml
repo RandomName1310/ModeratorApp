@@ -129,7 +129,7 @@
                             CornerRadius="10"
                             HorizontalOptions="Fill"
                             HeightRequest="45"
-                            Clicked="AddEventCard"/>
+                            Clicked="AddEvent"/>
                 </Grid>
             </Border>
         </Grid>

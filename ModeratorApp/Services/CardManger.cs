@@ -6,10 +6,7 @@ using Microsoft.Maui.Controls;
 using ModeratorApp.Cards;
 
 namespace ModeratorApp.Services {
-    public class CardManager {
-        private readonly Layout _eventStackLayout;
-        private event_data _ev_data;
-
+    public static class CardManager {
         public struct event_data {
             public int event_id { get; set; }
             public string name { get; set; }
@@ -33,29 +30,37 @@ namespace ModeratorApp.Services {
             public string color { get; set; }
         }
 
-        public CardManager(Layout eventStackLayout, event_data ev_data = new event_data()) {
-            _eventStackLayout = eventStackLayout;
-            _ev_data = ev_data;
-        }
-
-        public void add_event(event_data e_data) {
+        public static EventCard add_event(event_data e_data, Layout stackLayout) {
             var card = new EventCard(e_data);
-            _eventStackLayout.Children.Add(card);
+            stackLayout.Children.Add(card);
+            return card;
         }
 
-        public void add_client(client_data c_data, event_data e_data) {
+        public static ClientCard add_client(client_data c_data, event_data e_data, Layout stackLayout) {
             var card = new ClientCard(c_data, e_data);
-            _eventStackLayout.Children.Add(card);
+            stackLayout.Children.Add(card);
+            return card;
         }
 
-        public void add_role(RoleData role_data) {
+        public static RoleReadCard add_role(RoleData role_data, Layout stackLayout) {
             var card = new RoleReadCard(role_data);
-            _eventStackLayout.Children.Add(card);
+            stackLayout.Children.Add(card);
+            return card;
         }
 
-        public void add_role_manage(RoleData role_data) {
+        public static RoleManageCard add_role_manage(RoleData role_data, Layout stackLayout) {
             var card = new RoleManageCard(role_data);
-            _eventStackLayout.Children.Add(card);
+            stackLayout.Children.Add(card);
+            return card;
+        }
+        public static SubRoleShowCard add_sub_role_manage(RoleData role_data, Layout stackLayout) {
+            var card = new SubRoleShowCard(role_data);
+            stackLayout.Children.Add(card);
+            return card;
+        }
+        public static Color GetRandomColor() {
+            var random = new Random();
+            return Color.FromRgb(random.Next(100, 256), random.Next(100, 256), random.Next(100, 256));
         }
     }
 }

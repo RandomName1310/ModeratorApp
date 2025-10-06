@@ -3,6 +3,7 @@ using System.Data;
 using System.Xml.Linq;
 using Microsoft.Data.SqlClient;
 using ModeratorApp.Services;
+using ModeratorApp.Cards;
 
 namespace ModeratorApp;
 
@@ -22,7 +23,7 @@ public partial class EventForm : ContentView
         // clear picker before init
         RolePicker.Items.Clear();
 
-        string query = "SELECT * FROM roles";
+        string query = "SELECT * FROM Roles";
         var command = new SqlCommand(query);
         DataTable? table = DatabaseConnector.ExecuteReadQuery(command);
 
@@ -35,19 +36,19 @@ public partial class EventForm : ContentView
     }
 
     private void OnRolePickerChange(object sender, EventArgs e) {
-        var role_manager = new CardManager(RoleStack);
         var role_data = new CardManager.RoleData {
             role_id = 1,
             name = RolePicker.SelectedItem?.ToString() ?? "None",
             color = GetRandomColor().ToHex()
         };
 
-        role_manager.add_role(role_data);
+        CardManager.add_role(role_data, RoleStack);
     }
 
-    private async void AddEventCard(object sender, EventArgs e) {
-        string query = @"INSERT INTO events(name, description, date, time_begin, time_end, link) 
-                        VALUES(@name, @description, @date, @time_begin, @time_end, @link)";
+    private async void AddEvent(object sender, EventArgs e) {
+        string query = @"INSERT INTO Events(name, description, date, time_begin, time_end, link) 
+                        VALUES(@name, @description, @date, @time_begin, @time_end, @link)
+                        SELECT SCOPE_IDENTITY()";
 
         var command = new SqlCommand(query);
         command.Parameters.AddWithValue("@name", NameEntry.Text ?? "None");
@@ -56,16 +57,33 @@ public partial class EventForm : ContentView
         command.Parameters.AddWithValue("@time_begin", TimeBegin.Time.ToString() ?? "None");
         command.Parameters.AddWithValue("@time_end", TimeEnd.Time.ToString() ?? "None");
         command.Parameters.AddWithValue("@link", LinkEntry.Text ?? "None");
-        int roles_affected = DatabaseConnector.ExecuteNonQuery(command);
+        int? event_id = Convert.ToInt32(DatabaseConnector.ExecuteScalarQuery(command));
 
-        if (roles_affected == 0) {
+        if (event_id == null) {
             await Application.Current.MainPage.DisplayAlert("Commando SQL não reconhecido", "Coloque dados válidos", "Tentar novamente");
             return;
         }
-        var ev_manager = new CardManager(layout);
 
+        // connect roles to event
+        foreach(var child in RoleStack.Children) {
+            if(child is RoleReadCard r_card) {
+                // get role id
+                var roleID_command = new SqlCommand("SELECT role_ID FROM Roles WHERE name = @role_name");
+                roleID_command.Parameters.AddWithValue("@role_name", r_card.RoleName);
+                int? role_id = Convert.ToInt32(DatabaseConnector.ExecuteScalarQuery(roleID_command));
+
+                string role_query = @"INSERT INTO Event_Role(event_ID, role_ID, number_limit) 
+                                      VALUES(@event_id, @role_id, @number_limit)";
+                var role_command = new SqlCommand(role_query);
+                role_command.Parameters.AddWithValue("@event_id", event_id.Value);
+                role_command.Parameters.AddWithValue("@role_id", role_id.Value);
+                role_command.Parameters.AddWithValue("@number_limit", r_card.num_limit);
+
+                DatabaseConnector.ExecuteNonQuery(role_command);
+            }
+        }
         var event_data = new CardManager.event_data {
-            event_id = 10,
+            event_id = event_id.Value,
             name = NameEntry.Text ?? "None",
             description = DescriptionEntry.Text ?? "None",
             date = DateEntry.Date.ToString() ?? "None",
@@ -74,7 +92,7 @@ public partial class EventForm : ContentView
             link = LinkEntry.Text ?? "None", 
             color = GetRandomColor().ToHex()
         };
-        ev_manager.add_event(event_data);
+        CardManager.add_event(event_data, layout);
 
         if (this.Parent is Layout parentLayout) {
             parentLayout.Children.Remove(this);

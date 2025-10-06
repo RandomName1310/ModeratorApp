@@ -5,7 +5,11 @@ using System.Diagnostics;
 
 namespace ModeratorApp.Services {
     static class DatabaseConnector {
-        static string connectionString = "Server=DESKTOP-F17KATG\\SQLEXPRESS;Database=Amo_Database;User Id=AmoUser;Password=barbosa20;TrustServerCertificate=True;";
+        static string connectionString = @"Server=192.168.1.66,1433;
+                                           Database=Amo_Database;
+                                           User Id=AmoUser;
+                                           Password=barbosa20;
+                                           TrustServerCertificate=True;";
 
         public static DataTable ExecuteReadQuery(SqlCommand command) {
             var dataTable = new DataTable();

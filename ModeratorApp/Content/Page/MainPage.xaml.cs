@@ -16,8 +16,6 @@ public partial class MainPage : ContentPage
 
     private void ExecuteQuery()
     {
-        var ev_manager = new CardManager(EventStackLayout);
-
         var command = new SqlCommand("SELECT * FROM Events");
         DataTable table = DatabaseConnector.ExecuteReadQuery(command);
 
@@ -35,7 +33,7 @@ public partial class MainPage : ContentPage
                 color = GetRandomColor().ToHex()
             };
 
-           ev_manager.add_event(event_data);
+            CardManager.add_event(event_data, EventStackLayout);
         }
     }
 

@@ -13,7 +13,7 @@ public partial class RoleForm : ContentView
 		ShowRoles();
 	}
 
-	async void ShowRoles() {
+	void ShowRoles() {
         // remove all current elements
         RoleStack.Children.Clear();
 
@@ -22,18 +22,17 @@ public partial class RoleForm : ContentView
         DataTable? table = DatabaseConnector.ExecuteReadQuery(command);
 
         foreach (DataRow row in table.Rows) {
-            var role_manager = new CardManager(RoleStack);
             var role_data = new CardManager.RoleData {
                 role_id = Convert.ToInt32(row["role_id"]),
                 name = row["name"].ToString() ?? "None",
                 color = GetRandomColor().ToHex()
             };
 
-            role_manager.add_role_manage(role_data);
+            CardManager.add_role_manage(role_data, RoleStack);
         }
 	}
 
-    async void AddRole(object sender, EventArgs e) {
+    void AddRole(object sender, EventArgs e) {
         string query = $"INSERT INTO Roles(name) VALUES(@role_name);";
         var client_command = new SqlCommand(query);
         client_command.Parameters.AddWithValue("@role_name", RoleEntry.Text);

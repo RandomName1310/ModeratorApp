@@ -21,6 +21,9 @@ public partial class ClientCard : ContentView {
         BindingContext = c_data;
         _initialHeight = RootBorder.HeightRequest > 0 ? RootBorder.HeightRequest : RootBorder.Height;
     }
+
+    public VerticalStackLayout RoleStackLayout => RoleStack;
+
     private void OnExpandClicked(object sender, EventArgs e) {
         double from, to;
 

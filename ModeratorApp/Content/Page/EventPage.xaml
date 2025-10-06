@@ -44,26 +44,28 @@
     </ContentPage.Resources>
     
     <!-- CONTENT-->
-    <VerticalStackLayout x:Name="ClientStackLayout">
-        <Label x:Name="MainText"
-               Text=""
-               HorizontalOptions="Center"
-               FontAttributes="Bold"
-               FontSize="30"
-               TextColor="White" />
+    <ScrollView>
+        <VerticalStackLayout x:Name="ClientStackLayout">
+            <Label x:Name="MainText"
+                   Text=""
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   TextColor="White" />
 
-        <Label x:Name="DescriptionText"
-               Text=""
-               HorizontalOptions="Center"
-               FontAttributes="Bold"
-               FontSize="20"
-               TextColor="White" />
+            <Label x:Name="DescriptionText"
+                   Text=""
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   TextColor="White" />
 
-        <Label x:Name="Link"
-               Text=""
-               HorizontalOptions="Center"
-               FontAttributes="Bold"
-               FontSize="20"
-               TextColor="White" />
-    </VerticalStackLayout>
+            <Label x:Name="Link"
+                   Text=""
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="20"
+                   TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

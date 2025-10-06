@@ -51,7 +51,8 @@
                 <Label Text="{Binding name}"
                    Style="{StaticResource MainText}" />
 
-                <Entry Placeholder="Número limite"
+                <Entry x:Name="NumLimit"
+                   Placeholder="Número limite"
                    Style="{StaticResource EntryStyle}"
                    HorizontalOptions="Fill"
                    VerticalOptions="Center"/>

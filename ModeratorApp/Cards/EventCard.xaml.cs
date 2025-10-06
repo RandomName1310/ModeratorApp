@@ -1,6 +1,7 @@
 using Microsoft.Data.SqlClient;
 using ModeratorApp.Services;
 using System.Data;
+using System.Threading;
 namespace ModeratorApp.Cards;
 
 public partial class EventCard : ContentView
@@ -27,22 +28,31 @@ public partial class EventCard : ContentView
     public void RemoveEvent(object sender, EventArgs e) {
         if (sender is Button btn) {
             if (!event_data.Equals(default(CardManager.event_data)) && btn.BackgroundColor == Colors.Red) {
-                string deleteClientsQuery = "DELETE FROM Volunteer_Event WHERE event_ID = @event_id";
+                string deleteClientsQuery = "DELETE FROM Volunteer_Event WHERE event_ID = @event_id;";
+                string deleteRoleQuery = "DELETE FROM Event_Role WHERE event_ID = @event_id;";
                 string deleteEventQuery = "DELETE FROM Events WHERE event_ID = @event_id;";
 
+                var deleteClientsCommand = new SqlCommand(deleteClientsQuery);
+                var deleteRoleCommand = new SqlCommand(deleteRoleQuery);
+                var deleteEventCommand = new SqlCommand(deleteEventQuery);
 
-                var deleteClientscommand = new SqlCommand(deleteClientsQuery);
-                var deleteEventcommand = new SqlCommand(deleteEventQuery);
+                deleteClientsCommand.Parameters.AddWithValue("@event_id", event_data.event_id);
+                deleteRoleCommand.Parameters.AddWithValue("@event_id", event_data.event_id);
+                deleteEventCommand.Parameters.AddWithValue("@event_id", event_data.event_id);
 
-                deleteClientscommand.Parameters.AddWithValue("@event_id", event_data.event_id);
-                deleteEventcommand.Parameters.AddWithValue("@event_id", event_data.event_id);
+                try {
+                    DatabaseConnector.ExecuteNonQuery(deleteClientsCommand);
+                    DatabaseConnector.ExecuteNonQuery(deleteRoleCommand);
+                    DatabaseConnector.ExecuteNonQuery(deleteEventCommand);
 
-                DatabaseConnector.ExecuteNonQuery(deleteClientscommand);
-                DatabaseConnector.ExecuteNonQuery(deleteEventcommand);
-
-                btn.BackgroundColor = Colors.Gray;
-                btn.Text = "Removed";
+                    btn.BackgroundColor = Colors.Gray;
+                    btn.Text = "Removed";
+                }
+                catch (Exception ex) {
+                    Application.Current.MainPage.DisplayAlert("Erro", "Não foi possível remover o evento.", "OK");
+                }
             }
         }
     }
+
 }

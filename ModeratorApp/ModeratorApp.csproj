@@ -66,6 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Cards\SubRoleShowCard.xaml.cs">
+	    <DependentUpon>SubRoleShowCard.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Cards\RoleReadCard.xaml.cs">
 	    <DependentUpon>RoleReadCard.xaml</DependentUpon>
 	  </Compile>
@@ -76,6 +79,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Cards\EventCard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Cards\SubRoleShowCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Cards\RoleReadCard.xaml">
