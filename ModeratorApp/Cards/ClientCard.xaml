@@ -52,9 +52,9 @@
             Style="{StaticResource BorderStyle}"
             BackgroundColor="{Binding color}"
             AutomationId="{Binding name}"
-            MaximumHeightRequest="500">
+            MaximumHeightRequest="80">
 
-        <Grid RowDefinitions="Auto, *" ColumnDefinitions="*, Auto" RowSpacing="10" ColumnSpacing="10">
+        <Grid RowDefinitions="Auto, *" ColumnDefinitions="*, *, *" RowSpacing="10" ColumnSpacing="10">
 
             <!-- client name -->
             <Label Grid.Row="0" Grid.Column="0"
@@ -63,8 +63,13 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Start"/>
 
+            <!-- client data -->
+            <Label Grid.Row="1" Grid.Column="0"
+                   x:Name="ClientDataLabel"
+                   Style="{StaticResource MainText}"/>
+
             <!-- Buttons -->
-            <HorizontalStackLayout Grid.Row="0" Grid.Column="1"
+            <HorizontalStackLayout Grid.Row="0" Grid.Column="2"
                                    HorizontalOptions="End"
                                    VerticalOptions="Center"
                                    Spacing="10">
@@ -73,7 +78,7 @@
             </HorizontalStackLayout>
 
             <!-- show events -->
-            <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+            <ScrollView Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"
                         VerticalScrollBarVisibility="Always"
                         MaximumHeightRequest="400">
                 <VerticalStackLayout x:Name="RoleStack"

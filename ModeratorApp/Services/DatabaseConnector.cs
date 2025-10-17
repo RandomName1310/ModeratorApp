@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace ModeratorApp.Services {
     static class DatabaseConnector {
-        static string connectionString = @"Server=192.168.1.66,1433;
+        static string connectionString = @"Server=192.168.1.132,1433;
                                            Database=Amo_Database;
                                            User Id=AmoUser;
                                            Password=barbosa20;

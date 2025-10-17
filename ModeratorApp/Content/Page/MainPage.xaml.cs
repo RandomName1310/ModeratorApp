@@ -21,8 +21,7 @@ public partial class MainPage : ContentPage
 
         foreach (DataRow row in table.Rows)
         {
-            var event_data = new CardManager.event_data
-            {
+            var event_data = new CardManager.EventData {
                 event_id = Convert.ToInt32(row["event_id"]),
                 name = row["name"].ToString() ?? "None",
                 description = row["description"].ToString() ?? "None",

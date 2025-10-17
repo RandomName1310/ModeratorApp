@@ -7,7 +7,7 @@ using ModeratorApp.Cards;
 
 namespace ModeratorApp.Services {
     public static class CardManager {
-        public struct event_data {
+        public struct EventData {
             public int event_id { get; set; }
             public string name { get; set; }
             public string description { get; set; }
@@ -18,9 +18,11 @@ namespace ModeratorApp.Services {
             public string color { get; set; }
         }
 
-        public struct client_data {
+        public struct ClientData {
             public int client_id { get; set; }
             public string name { get; set; }
+            public int age { get; set; }
+            public string email { get; set; }
             public string color { get; set; }
         }
 
@@ -30,13 +32,13 @@ namespace ModeratorApp.Services {
             public string color { get; set; }
         }
 
-        public static EventCard add_event(event_data e_data, Layout stackLayout) {
+        public static EventCard add_event(EventData e_data, Layout stackLayout) {
             var card = new EventCard(e_data);
             stackLayout.Children.Add(card);
             return card;
         }
 
-        public static ClientCard add_client(client_data c_data, event_data e_data, Layout stackLayout) {
+        public static ClientCard add_client(ClientData c_data, EventData e_data, Layout stackLayout) {
             var card = new ClientCard(c_data, e_data);
             stackLayout.Children.Add(card);
             return card;
@@ -53,8 +55,13 @@ namespace ModeratorApp.Services {
             stackLayout.Children.Add(card);
             return card;
         }
-        public static SubRoleShowCard add_sub_role_manage(RoleData role_data, Layout stackLayout) {
-            var card = new SubRoleShowCard(role_data);
+        public static SubRoleShowCard add_sub_role_manage(RoleData role_data, EventData event_data, ClientData c_data, Layout stackLayout) {
+            var card = new SubRoleShowCard(role_data, event_data, c_data);
+            stackLayout.Children.Add(card);
+            return card;
+        }
+        public static RoleLimitCard add_role_limit(RoleData role_data, EventData event_data, Layout stackLayout) {
+            var card = new RoleLimitCard(role_data, event_data);
             stackLayout.Children.Add(card);
             return card;
         }

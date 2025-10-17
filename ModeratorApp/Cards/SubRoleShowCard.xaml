@@ -50,12 +50,12 @@
                              VerticalOptions="Center">
                 <Label Text="{Binding name}"
                    Style="{StaticResource MainText}" />
-
-                <Entry x:Name="NumLimit"
-                   Placeholder="Número limite"
-                   Style="{StaticResource EntryStyle}"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Center"/>
+                <Label x:Name="DateLabel"
+                       Style="{StaticResource MainText}"/>
+                <Label x:Name="TimeBeginLabel"
+                       Style="{StaticResource MainText}"/>
+                <Label x:Name="TimeEndLabel"
+                       Style="{StaticResource MainText}"/>
             </VerticalStackLayout>
         </Grid>
     </Border>

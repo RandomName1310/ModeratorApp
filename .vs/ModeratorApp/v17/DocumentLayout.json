@@ -1,22 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\services\\cardmanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\subroleshowcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\subroleshowcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\subroleshowcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\subroleshowcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\content\\view\\eventform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\content\\view\\eventform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\content\\view\\eventform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\content\\view\\eventform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\services\\databaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\services\\databaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\rolelimitcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\rolelimitcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\rolelimitcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\rolelimitcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\services\\cardmanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\services\\cardmanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\clientcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\clientcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\content\\page\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\content\\page\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\content\\page\\eventpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\pedro\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\clientcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\clientcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\clientcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\clientcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\clientcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\content\\page\\eventpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\content\\page\\eventpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\eventcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\eventcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\eventcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\eventcard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\rolereadcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\rolereadcard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\cards\\rolemanagecard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\cards\\rolemanagecard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|c:\\users\\usuario\\onedrive\\desktop\\apps\\moderatorapp\\moderatorapp\\content\\view\\roleform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{205365A2-C4D1-46BC-AC8D-6137DF545940}|ModeratorApp\\ModeratorApp.csproj|solutionrelative:moderatorapp\\content\\view\\roleform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,61 +78,233 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EventCard.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\EventCard.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\EventCard.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\EventCard.xaml",
+              "RelativeToolTip": "ModeratorApp\\Cards\\EventCard.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-11T22:15:28.804Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EventPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
-              "RelativeDocumentMoniker": "ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
-              "RelativeToolTip": "ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAArwCAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T14:33:28.346Z"
+              "$type": "Bookmark",
+              "Name": "ST:1092401942:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CardManger.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Services\\CardManger.cs",
-              "RelativeDocumentMoniker": "ModeratorApp\\Services\\CardManger.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Services\\CardManger.cs",
-              "RelativeToolTip": "ModeratorApp\\Services\\CardManger.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBkAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "RoleManageCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleManageCard.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\RoleManageCard.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleManageCard.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Cards\\RoleManageCard.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T14:32:25.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:18:27.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CardManger.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Services\\CardManger.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Services\\CardManger.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Services\\CardManger.cs",
+              "RelativeToolTip": "ModeratorApp\\Services\\CardManger.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAawDoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:20:49.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventForm.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\View\\EventForm.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Content\\View\\EventForm.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\View\\EventForm.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Content\\View\\EventForm.xaml.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwDEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T22:22:51.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClientCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\ClientCard.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Cards\\ClientCard.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T22:26:27.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseConnector.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Services\\DatabaseConnector.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Services\\DatabaseConnector.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Services\\DatabaseConnector.cs",
+              "RelativeToolTip": "ModeratorApp\\Services\\DatabaseConnector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T18:10:21.354Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ClientCard.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml.cs",
-              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\ClientCard.xaml.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml.cs",
-              "RelativeToolTip": "ModeratorApp\\Cards\\ClientCard.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Title": "SubRoleShowCard.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\SubRoleShowCard.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\SubRoleShowCard.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\SubRoleShowCard.xaml",
+              "RelativeToolTip": "ModeratorApp\\Cards\\SubRoleShowCard.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T19:14:49.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubRoleShowCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\SubRoleShowCard.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\SubRoleShowCard.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\SubRoleShowCard.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Cards\\SubRoleShowCard.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvx0AAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T14:30:13.208Z",
+              "WhenOpened": "2025-10-06T19:15:00.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientCard.xaml",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml",
-              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\ClientCard.xaml",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml",
-              "RelativeToolTip": "ModeratorApp\\Cards\\ClientCard.xaml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "RoleLimitCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleLimitCard.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\RoleLimitCard.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleLimitCard.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Cards\\RoleLimitCard.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T22:16:34.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoleLimitCard.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleLimitCard.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\RoleLimitCard.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleLimitCard.xaml",
+              "RelativeToolTip": "ModeratorApp\\Cards\\RoleLimitCard.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-20T14:30:07.816Z"
+              "WhenOpened": "2025-10-11T22:16:18.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Content\\Page\\EventPage.xaml.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowFkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:06:06.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClientCard.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\ClientCard.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\ClientCard.xaml",
+              "RelativeToolTip": "ModeratorApp\\Cards\\ClientCard.xaml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-11T22:15:31.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EventForm.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\View\\EventForm.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Content\\View\\EventForm.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\View\\EventForm.xaml",
+              "RelativeToolTip": "ModeratorApp\\Content\\View\\EventForm.xaml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-16T22:04:43.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EventPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\Page\\EventPage.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Content\\Page\\EventPage.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\Page\\EventPage.xaml",
+              "RelativeToolTip": "ModeratorApp\\Content\\Page\\EventPage.xaml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T19:13:28.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EventCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\EventCard.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\EventCard.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\EventCard.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Cards\\EventCard.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwBsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:18:24.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RoleReadCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleReadCard.xaml.cs",
+              "RelativeDocumentMoniker": "ModeratorApp\\Cards\\RoleReadCard.xaml.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Cards\\RoleReadCard.xaml.cs",
+              "RelativeToolTip": "ModeratorApp\\Cards\\RoleReadCard.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:18:29.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RoleForm.xaml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\View\\RoleForm.xaml",
+              "RelativeDocumentMoniker": "ModeratorApp\\Content\\View\\RoleForm.xaml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Desktop\\Apps\\ModeratorApp\\ModeratorApp\\Content\\View\\RoleForm.xaml",
+              "RelativeToolTip": "ModeratorApp\\Content\\View\\RoleForm.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-11T22:15:04.962Z"
             }
           ]
         }

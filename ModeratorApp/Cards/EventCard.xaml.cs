@@ -6,9 +6,9 @@ namespace ModeratorApp.Cards;
 
 public partial class EventCard : ContentView
 {
-    private CardManager.event_data event_data;
+    private CardManager.EventData event_data;
 
-    public EventCard(CardManager.event_data e_data) {
+    public EventCard(CardManager.EventData e_data) {
         InitializeComponent();
         event_data = e_data;
 
@@ -27,7 +27,7 @@ public partial class EventCard : ContentView
     }
     public void RemoveEvent(object sender, EventArgs e) {
         if (sender is Button btn) {
-            if (!event_data.Equals(default(CardManager.event_data)) && btn.BackgroundColor == Colors.Red) {
+            if (!event_data.Equals(default(CardManager.EventData)) && btn.BackgroundColor == Colors.Red) {
                 string deleteClientsQuery = "DELETE FROM Volunteer_Event WHERE event_ID = @event_id;";
                 string deleteRoleQuery = "DELETE FROM Event_Role WHERE event_ID = @event_id;";
                 string deleteEventQuery = "DELETE FROM Events WHERE event_ID = @event_id;";

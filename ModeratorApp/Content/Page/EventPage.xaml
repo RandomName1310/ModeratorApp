@@ -66,6 +66,27 @@
                    FontAttributes="Bold"
                    FontSize="20"
                    TextColor="White" />
+            <Grid x:Name="GeneralRoleContainer" HeightRequest="40" ColumnDefinitions="100, *" RowDefinitions="50, *">
+                <ImageButton x:Name="ArrowImage"
+                             Grid.Column="0"
+                             Grid.Row="0"
+                             Source="seta_baixo.png" 
+                             WidthRequest="15" 
+                             HeightRequest="15" 
+                             BackgroundColor="#262626"
+                             Clicked="ShowRoles"
+                             ZIndex="-10"/>
+                <Label Text="Papéis relacionados"
+                       VerticalOptions="Center"
+                       FontSize="25"
+                       TextColor="White" 
+                       Grid.Column="1"/>
+                <ScrollView Grid.Row="1" Grid.ColumnSpan="2">
+                    <VerticalStackLayout x:Name="RoleStack" TranslationY="55" WidthRequest="500" HeightRequest="400">
+                        <!-- Limit Cards go Here -->
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

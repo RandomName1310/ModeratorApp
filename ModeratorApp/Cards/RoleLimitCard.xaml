@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModeratorApp.Cards.RoleLimitCard">
+
+    <ContentView.Resources>
+        <!-- Main Text Style -->
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="#333333"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Entry Style -->
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#F0F0F0"/>
+            <Setter Property="TextColor" Value="#333"/>
+            <Setter Property="PlaceholderColor" Value="#888"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HeightRequest" Value="40"/>
+        </Style>
+    </ContentView.Resources>
+
+    <Border x:Name="RootBorder"
+        Stroke="#9c9c9c"
+        StrokeThickness="2"
+        MaximumWidthRequest="800"
+        BackgroundColor="White"
+        HorizontalOptions="Fill"
+        VerticalOptions="Start"
+        Margin="10">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="15"/>
+        </Border.StrokeShape>
+
+        <Grid Padding="10">
+            <ImageButton Grid.Column="1"
+                Source="trash.png"
+                MaximumWidthRequest="20"
+                MaximumHeightRequest="20"
+                HorizontalOptions="End"
+                VerticalOptions="Start"
+                Clicked="OnCloseClicked"
+                ZIndex="1"/>    
+
+            <VerticalStackLayout HorizontalOptions="Fill"
+                             VerticalOptions="Center">
+                <Label Text="{Binding name}"
+                   Style="{StaticResource MainText}" />
+
+                <Label x:Name="NumLimitLabel"
+                       Style="{StaticResource MainText}"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Border>
+</ContentView>

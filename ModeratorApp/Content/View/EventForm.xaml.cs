@@ -46,6 +46,7 @@ public partial class EventForm : ContentView
     }
 
     private async void AddEvent(object sender, EventArgs e) {
+        // creating event on database
         string query = @"INSERT INTO Events(name, description, date, time_begin, time_end, link) 
                         VALUES(@name, @description, @date, @time_begin, @time_end, @link)
                         SELECT SCOPE_IDENTITY()";
@@ -82,7 +83,7 @@ public partial class EventForm : ContentView
                 DatabaseConnector.ExecuteNonQuery(role_command);
             }
         }
-        var event_data = new CardManager.event_data {
+        var event_data = new CardManager.EventData {
             event_id = event_id.Value,
             name = NameEntry.Text ?? "None",
             description = DescriptionEntry.Text ?? "None",

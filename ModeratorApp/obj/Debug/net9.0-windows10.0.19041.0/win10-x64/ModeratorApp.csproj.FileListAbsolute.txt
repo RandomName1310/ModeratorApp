@@ -512,3 +512,7 @@ C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\obj\Debug\net9.
 C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\seta_baixo.scale-100.png
+C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\seta_cima.scale-100.png
+C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\seta_baixo.scale-100.png
+C:\Users\Usuario\OneDrive\Desktop\Apps\ModeratorApp\ModeratorApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\seta_cima.scale-100.png
